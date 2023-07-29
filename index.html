@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pagamento</h1>
+    </header>
+
+    <section>
+        <div id="main">
+            <p>Valor: <input type="number" id="txtv"></p>
+            <input type="radio" name="escolha" id="pixb">
+            <label for="pixb">Pix</label>
+            <input type="radio" name="escolha" id="cartao">
+            <label for="cartao">Cartão de crédito</label><img src="img/master.png" alt="master" class="bandeiramaster" id="bandeiraIcon">
+            <img src="img/visa.png" alt="visa" class="bandeira" id="bandeiraIcon"><br>
+            
+        </div>
+        <div id="divpix">
+            <article id="pixa">
+                <h3>PIX</h3>
+                <p>CPF <input type="text" id="cpf"></p>
+            </article>
+        </div>
+
+        
+
+        <div id="cartaoDiv">
+            <article id="cartaoa">
+                <p>Número <input type="number" name="txtc" id="txtc"></p>
+                <p style="color: red; font-size: 0.5em; margin-top: -20px; display: none;" id="invalido">numero de cartão invalido</p>
+                <p>Titular <input type="text"></p>
+                <p>Cod. de segurança <input type="number"></p>
+                 <p>Vencimento <input type="date"></p>
+                 <p>Parcela <select name="parcelas" id="parcelas">
+                    <option value="1">Parcele em 1x sem juros</option>
+                    <option value="2">Parcele em 2x sem juros</option>
+                    <option value="3">Parcele em 3x sem juros</option>
+                    <option value="4">Parcele em 4x juros de 5%</option>
+                    <option value="5">Parcele em 5x juros de 10%</option>
+                 </select></p>
+            </article>
+        </div>
+        <input type="button" value="Informar dados" class="botao" onclick="informar()">
+        
+
+        <div id="res">
+                <p id="tot">Valor inicial: </p>
+                <p id="totfinal">Valor atualizado:</p>
+                <input type="button" value="pagar" class="botao" style="display: none;"  id="pagar" onclick="verificarCPF()">
+        </div>
+    </section>
+    
+    <footer>
+        &copy;SENAC
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
